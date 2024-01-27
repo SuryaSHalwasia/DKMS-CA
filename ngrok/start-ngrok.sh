@@ -6,4 +6,8 @@ else
   NGROK="ngrok"
 fi
 
-$NGROK start --all --config=./ngrok.yml --log=stdout
+if [ -f ../.env ]; then
+  source ../.env
+fi
+
+$NGROK start --all --config=./ngrok.yml --authtoken=${NGROK_AUTH_TOKEN} --log=stdout
