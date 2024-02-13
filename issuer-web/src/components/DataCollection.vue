@@ -53,6 +53,8 @@ export default class DataCollection extends Vue {
       Object.keys(result.data).forEach(key => {
         credentialClaims.push({ name: key, value: result.data[key] });
       });
+      console.log(result.data)
+      alert(result.data)
       this.$store.commit("credential/updateClaims", credentialClaims);
 
       // Go to next page on successful completion

@@ -1,20 +1,19 @@
 [
   {
-    "id": "85459GxjNySJ8HwTTQ4vq7:2:verified_person:1.4.0"
+    "id": "85459GxjNySJ8HwTTQ4vq7:2:vehicle_credential:1.4.0"
   },
   {
-    "schema_name": "verified_person",
+    "schema_name": "vehicle_credential",
     "schema_version": "0.1.0",
     "attributes": [
-      "locality",
+      "vehicle_name",
       "issued",
-      "birthdate",
-      "postal_code",
-      "region",
-      "family_name",
-      "street_address",
-      "country",
-      "given_names"
+      "expiry",
+      "region_issued",
+      "photo_id",
+      "vehicle_owner",
+      "owner_address",
+      "country"
     ],
     "default": true,
     "revocable": true,

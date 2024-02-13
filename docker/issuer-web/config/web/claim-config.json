@@ -1,56 +1,50 @@
 {
   "questions": [
     {
-      "name": "given_names",
+      "name": "vehicle_name",
       "type": "text",
-      "title": "First Name:",
+      "title": "Vehicle Name:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "family_name",
+      "name": "vehicle_owner",
       "type": "text",
-      "title": "Last Name:",
+      "title": "Vehicle Owner:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "birthdate",
+      "name": "expiry",
       "type": "text",
-      "inputType": "date",
-      "title": "Date of Birth:",
+      "inputType": "text",
+      "dateFormat" : "yyyymmdd",
+      "title": "Credential Expiry:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "street_address",
+      "name": "owner_address",
       "type": "text",
-      "title": "Street Address:",
+      "title": "Owner Address:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "postal_code",
+      "name": "photo_id",
       "type": "text",
-      "title": "Postal Code:",
+      "title": "Photo ID:",
       "placeHolder": "",
       "isRequired": true,
+      "defaultValue":"https://www.dropbox.com/scl/fi/iwxz2q318ou2hkbgkrqas/car-insurance.png?rlkey=wtve6mbjj4hxe0tmkbwmrhzyt&dl=0",
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "locality",
-      "type": "text",
-      "title": "City:",
-      "placeHolder": "",
-      "isRequired": true,
-      "requiredErrorText": "Required Field"
-    },
-    {
-      "name": "region",
+      "name": "region_issued",
       "type": "text",
       "title": "Province:",
       "placeHolder": "",
@@ -62,7 +56,7 @@
       "type": "text",
       "title": "Country:",
       "placeHolder": "",
-      "defaultValue": "Canada",
+      "defaultValue": "USA",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },

@@ -736,27 +736,25 @@
           "config": {
             "user.attribute.formatted": "formatted",
             "user.attribute.country": "country",
-            "user.attribute.postal_code": "postal_code",
             "userinfo.token.claim": "true",
-            "user.attribute.street": "street_address",
+            "user.attribute.owner_address": "owner_address",
             "id.token.claim": "true",
-            "user.attribute.region": "region",
-            "access.token.claim": "true",
-            "user.attribute.locality": "locality"
+            "user.attribute.region_issued": "region_issued",
+            "access.token.claim": "true"
           }
         },
         {
           "id": "a2af9a3e-42bc-4a0b-a6b7-b48fd2fcfdb0",
-          "name": "birthdate",
+          "name": "date_issued",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-attribute-mapper",
           "consentRequired": false,
           "config": {
             "userinfo.token.claim": "true",
-            "user.attribute": "birthdate",
+            "user.attribute": "date_issued",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "birthdate",
+            "claim.name": "date_issued",
             "jsonType.label": "String"
           }
         },
@@ -777,7 +775,7 @@
         },
         {
           "id": "d7bb4c20-a923-4bac-ac82-2b78a66cfdd3",
-          "name": "family name",
+          "name": "vehicle name",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-property-mapper",
           "consentRequired": false,
@@ -786,7 +784,7 @@
             "user.attribute": "lastName",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "family_name",
+            "claim.name": "vehicle_name",
             "jsonType.label": "String"
           }
         },
@@ -807,7 +805,7 @@
         },
         {
           "id": "84d65125-a2ac-4f4d-920f-b884c3876ad8",
-          "name": "given name",
+          "name": "vehicle owner",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-property-mapper",
           "consentRequired": false,
@@ -816,7 +814,7 @@
             "user.attribute": "firstName",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "given_name",
+            "claim.name": "vehicle_owner",
             "jsonType.label": "String"
           }
         }
@@ -995,7 +993,7 @@
         },
         {
           "id": "a0797a20-9776-4703-94d4-33747ff36d3a",
-          "name": "given name",
+          "name": "vehicle owner",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-property-mapper",
           "consentRequired": false,
@@ -1004,13 +1002,13 @@
             "user.attribute": "firstName",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "given_name",
+            "claim.name": "vehicle_owner",
             "jsonType.label": "String"
           }
         },
         {
           "id": "2955879b-c627-42f0-82e4-481391027e20",
-          "name": "family name",
+          "name": "vehicle name",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-property-mapper",
           "consentRequired": false,
@@ -1019,7 +1017,7 @@
             "user.attribute": "lastName",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "family_name",
+            "claim.name": "vehicle_name",
             "jsonType.label": "String"
           }
         },
@@ -1250,13 +1248,11 @@
           "config": {
             "user.attribute.formatted": "formatted",
             "user.attribute.country": "country",
-            "user.attribute.postal_code": "postal_code",
             "userinfo.token.claim": "true",
-            "user.attribute.street": "street",
+            "user.attribute.owner_address": "owner_address",
             "id.token.claim": "true",
-            "user.attribute.region": "region",
-            "access.token.claim": "true",
-            "user.attribute.locality": "locality"
+            "user.attribute.region_issued": "region_issued",
+            "access.token.claim": "true"
           }
         }
       ]
@@ -1473,23 +1469,13 @@
   ],
   "identityProviderMappers": [
     {
-      "id": "b24731f5-32b2-4d69-89b9-8d384b8e9a49",
-      "name": "locality",
-      "identityProviderAlias": "github",
-      "identityProviderMapper": "github-user-attribute-mapper",
-      "config": {
-        "userAttribute": "locality",
-        "jsonField": "location"
-      }
-    },
-    {
       "id": "e0087ca9-3070-4b06-a785-414ad616b73b",
-      "name": "streetAddress",
+      "name": "owner_address",
       "identityProviderAlias": "github",
       "identityProviderMapper": "github-user-attribute-mapper",
       "config": {
-        "userAttribute": "streetAddress",
-        "jsonField": "streetAddress"
+        "userAttribute": "owner_address",
+        "jsonField": "owner_address"
       }
     },
     {
@@ -1539,16 +1525,6 @@
       "config": {
         "userAttribute": "email",
         "jsonField": "email"
-      }
-    },
-    {
-      "id": "0ad2dd46-8562-4cc0-b4fc-42714f0d16dd",
-      "name": "postalCode",
-      "identityProviderAlias": "github",
-      "identityProviderMapper": "github-user-attribute-mapper",
-      "config": {
-        "userAttribute": "postalCode",
-        "jsonField": "postalCode"
       }
     },
     {
