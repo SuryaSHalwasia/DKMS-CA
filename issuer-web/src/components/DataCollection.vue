@@ -49,7 +49,7 @@ export default class DataCollection extends Vue {
     this.survey = new SurveyVue.Model(claimConfig);
     this.survey.completeText = "Request Credential";
     this.survey.onComplete.add((result: any) => {
-      if (result.data.hasOwnProperty('expiry_date')) {
+      if (Object.prototype.hasOwnProperty.call(result.data, 'expiry_date')) {
       // Replace hyphens in the 'expiry_date' value
       alert(result.data.expiry_date)
       result.data.expiry_date = result.data.expiry_date.replace(/-/g, '')
