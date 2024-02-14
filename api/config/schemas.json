@@ -5,7 +5,7 @@
     "attributes": [
       "vehicle_name",
       "issued",
-      "expiry",
+      "expiry_date",
       "region_issued",
       "photo_id",
       "vehicle_owner",

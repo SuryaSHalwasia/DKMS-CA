@@ -17,10 +17,10 @@
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "expiry",
+      "name": "expiry_date",
       "type": "text",
       "inputType": "text",
-      "dateFormat" : "yyyymmdd",
+      "dateFormat" : "mm-dd-yyyy",
       "title": "Credential Expiry:",
       "placeHolder": "",
       "isRequired": true,
@@ -40,7 +40,7 @@
       "title": "Photo ID:",
       "placeHolder": "",
       "isRequired": true,
-      "defaultValue":"https://www.dropbox.com/scl/fi/iwxz2q318ou2hkbgkrqas/car-insurance.png?rlkey=wtve6mbjj4hxe0tmkbwmrhzyt&dl=0",
+      "defaultValue":"https://uc43dc6ab273eb1f06da9c7ecec4.previews.dropboxusercontent.com/p/thumb/ACJdux6LBjqwz7DEP720LFBnAA4fFgIELo9hQ38uh-hiYn8w2nxPaVZkve30z9hkd6m5l7xHjmTBc-TepRwgZPKMHu8CG6z9TkCnBE1HZQ2XrH9Xh2soC8xjwfEkCbH8tIJtueg1LRec2tC1gqd9eWRHqJEoVTrCVogTDHuRFMdkqg5_2K9rUYA6j91XBR6eogeKvsWE0LMU_vSxfum0JSedoHIyHWuqWJnNXboDCIJVUDlA0AwJLLR_qR2UzX-BCaWCi8Y-3l3VgY4-EvwHTG0_Ds1Wh_EFEkg6Q3TEAFc5jizUXD0hcU_b89sOFWfTbg65Y9a0kIbKbGTtp6MvZF2HNLdmfIxzO0bzerBkeAtz5RzjeRs4Ba0STye0RTl9Hvk/p.png",
       "requiredErrorText": "Required Field"
     },
     {
