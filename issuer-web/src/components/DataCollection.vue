@@ -49,18 +49,17 @@ export default class DataCollection extends Vue {
     this.survey = new SurveyVue.Model(claimConfig);
     this.survey.completeText = "Request Credential";
     this.survey.onComplete.add((result: any) => {
-      if (Object.prototype.hasOwnProperty.call(result.data, 'expiry_date')) {
-      // Replace hyphens in the 'expiry_date' value
-      alert(result.data.expiry_date)
-      result.data.expiry_date = result.data.expiry_date.replace(/-/g, '')
-      alert(result.data.expiry_date)
-      }
       const credentialClaims = new Array<Claim>();
       Object.keys(result.data).forEach(key => {
-        credentialClaims.push({ name: key, value: result.data[key] });
+        if(key == "expiry_date")
+        {
+            const modifiedExpiryDate = result.data[key].split("-").join("")
+            credentialClaims.push({ name: key, value: modifiedExpiryDate });    
+        }
+        else
+          credentialClaims.push({ name: key, value: result.data[key] });
       });
-      console.log(result.data)
-      alert(result.data)
+      
       this.$store.commit("credential/updateClaims", credentialClaims);
 
       // Go to next page on successful completion
