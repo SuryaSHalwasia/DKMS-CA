@@ -1,5 +1,5 @@
 {
-  "name": "issuer-admin",
+  "name": "fhwa-issuer-admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
