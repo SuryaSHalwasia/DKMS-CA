@@ -26,16 +26,16 @@ export class IssuerInvite extends Service implements ServiceSwaggerAddon {
     title: "Issuer Invite",
     description: "Issuer Invite Model",
     type: "object",
-    required: ["email"],
+    required: ["registration_number"],
     properties: {
       token: {
         type: "string",
         description: "The unique invite token",
         readOnly: true,
       },
-      email: {
+      registration_number: {
         type: "string",
-        description: "The email where the invite will be sent to",
+        description: "The registration number associated with the credentials",
       },
       issued: {
         type: "boolean",

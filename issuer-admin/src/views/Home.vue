@@ -77,7 +77,7 @@ export default class Home extends Vue {
   private loading = true;
   private options = {};
   private headers = [
-    { text: "Email", align: "start", value: "email" },
+    { text: "Registration Number", align: "start", value: "registration_number" },
     { text: "Issued", value: "issued" },
     { text: "Expired", value: "expired" },
     { text: "Revoked", value: "revoked" },

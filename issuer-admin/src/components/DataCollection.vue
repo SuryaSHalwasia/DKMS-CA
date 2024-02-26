@@ -29,9 +29,8 @@
 
       <v-form class="pa-4" ref="form">
         <v-text-field
-          v-model="issuerInvite.email"
-          :rules="emailRules"
-          label="E-mail"
+          v-model="issuerInvite.registration_number"
+          label="Vehicle Registration Number"
           required
           :disabled="editMode"
         ></v-text-field>
@@ -170,7 +169,7 @@ export default class DataCollection extends Vue {
           this.setExistingClaimValues(invite.data);
         }
         this.inviteLink = `${publicUrl}/?invite_token=${invite.token}`;
-        this.issuerInvite.email = invite.email;
+        this.issuerInvite.registration_number = invite.registration_number;
         this.issuerInvite.issued = invite.issued;
         this.issuerInvite.expired = invite.expired;
         this.issuerInvite.revoked = invite.revoked;
