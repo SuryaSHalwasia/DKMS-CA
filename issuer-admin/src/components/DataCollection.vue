@@ -54,16 +54,17 @@
 
       <v-divider></v-divider>
 
-      <v-card-title class="headline">Additional Data</v-card-title>
-      <v-card-subtitle class="text-left">
+      <v-card-title 
+          v-if="!editMode" class="headline">Additional Data</v-card-title>
+      <v-card-subtitle v-if="!editMode" class="text-left">
         Properties matching the name of claims in the credential to be issued
         will be used to pre-populate the fields and will prevent users from
         editing the values.
       </v-card-subtitle>
 
-      <survey :survey="survey" :key="surveyKey"></survey>
+      <survey :survey="survey" :key="surveyKey" v-if="!editMode"></survey>
 
-      <v-divider></v-divider>
+      <v-divider v-if="!editMode"></v-divider>
 
       <v-container fluid>
         <v-row class="mx-4" justify="end">
