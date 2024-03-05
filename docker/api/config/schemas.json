@@ -12,8 +12,7 @@
       "region_issued",
       "photo_id",
       "vehicle_owner",
-      "owner_address",
-      "country"
+      "owner_address"
     ],
     "default": true,
     "revocable": true,

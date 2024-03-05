@@ -49,15 +49,6 @@
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
-    },
-    {
-      "name": "country",
-      "type": "text",
-      "title": "Country:",
-      "placeHolder": "USA",
-      "defaultValue": "USA",
-      "isRequired": true,
-      "requiredErrorText": "Required Field"
     }
   ]
 }

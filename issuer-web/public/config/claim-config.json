@@ -60,15 +60,6 @@
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "country",
-      "type": "text",
-      "title": "Country:",
-      "placeHolder": "",
-      "defaultValue": "USA",
-      "isRequired": true,
-      "requiredErrorText": "Required Field"
-    },
-    {
       "type": "text",
       "name": "issued",
       "title": "Issued:",
