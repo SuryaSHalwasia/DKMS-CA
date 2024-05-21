@@ -3,14 +3,15 @@
     "schema_name": "vehicle_credential",
     "schema_version": "0.1.0",
     "attributes": [
-      "vehicle_name",
+      "vehicle_information",
+      "vin",
+      "registration_number"
       "issued",
       "expiry_date",
-      "region_issued",
+      "state_issued",
       "photo_id",
       "vehicle_owner",
-      "owner_address",
-      "country"
+      "owner_address"
     ],
     "default": true,
     "revocable": true,

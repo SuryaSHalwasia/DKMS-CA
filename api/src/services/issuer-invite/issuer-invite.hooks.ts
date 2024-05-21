@@ -52,11 +52,9 @@ export default {
     get: [],
     create: [
       setRequestUser("created_by"),
-      validateEmail,
       async (context: HookContext) => {
         context.data.token = uuidv4();
         context.data.created_at = moment().toISOString(true);
-        context.data.expiry = moment().add(5, 'minutes').toDate();
         if (context.app.get("issuer").validityDays > 0) {
           context.data.expiry = moment()
             .add(context.app.get("issuer").validityDays, "days")
@@ -67,7 +65,6 @@ export default {
     ],
     update: [
       setRequestUser("updated_by"),
-      validateEmail,
       handleRevocation,
       async (context: HookContext) => {
         context.data.updated_at = moment().toISOString(true);
@@ -81,7 +78,6 @@ export default {
     ],
     patch: [
       setRequestUser("updated_by"),
-      validateEmail,
       handleRevocation,
       async (context: HookContext) => {
         context.data.updated_at = moment().toISOString(true);
@@ -100,9 +96,9 @@ export default {
     all: [],
     find: [],
     get: [],
-    create: [sendEmailIfRequired],
-    update: [sendEmailIfRequired],
-    patch: [sendEmailIfRequired],
+    create: [],
+    update: [],
+    patch: [],
     remove: [],
   },
 

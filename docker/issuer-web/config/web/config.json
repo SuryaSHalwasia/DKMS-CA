@@ -1,7 +1,7 @@
 {
   "env": "docker-prod-like",
   "issuer": {
-    "name": "FHWA Credential Issuer"
+    "name": "FHWA VDKMS CA"
   },
   "help": {
     "enabled": true,
@@ -13,9 +13,9 @@
     "enabled": false,
     "autoSignOut": true,
     "oidcSettings": {
-      "authority": "http://localhost:8180/auth/realms/issuer-kit",
+      "authority": "http://18.188.165.212:8180/auth/realms/issuer-kit",
       "clientId": "issuer-kit-public",
-      "redirectUri": "http://localhost:8082/oidc-callback",
+      "redirectUri": "http://18.188.165.212:8082/oidc-callback",
       "redirect_uri": "http://localhost:8082/oidc-callback-error",
       "responseType": "code",
       "scope": "openid profile email",
@@ -28,11 +28,11 @@
     "url": "/api"
   },
   "issuedSuccess": {
-    "successText": "To try out your new credential:",
+    "successText": "",
     "links": [
       {
-        "url": "https://csb-audio.pathfinder.gov.bc.ca",
-        "description": "CSB Audio"
+        "url": "",
+        "description": ""
       }
     ]
   }

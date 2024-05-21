@@ -29,9 +29,8 @@
 
       <v-form class="pa-4" ref="form">
         <v-text-field
-          v-model="issuerInvite.email"
-          :rules="emailRules"
-          label="E-mail"
+          v-model="issuerInvite.registration_number"
+          label="Vehicle Registration Number"
           required
           :disabled="editMode"
         ></v-text-field>
@@ -39,11 +38,6 @@
           v-if="editMode"
           v-model="issuerInvite.issued"
           label="Credential has been issued"
-        ></v-checkbox>
-        <v-checkbox
-          v-if="editMode && issuerInvite.revoked != null"
-          v-model="issuerInvite.revoked"
-          label="Credential was revoked"
         ></v-checkbox>
         <v-checkbox
           v-if="editMode"
@@ -142,8 +136,10 @@ export default class DataCollection extends Vue {
     if (!this.$refs.form.validate() || !this.survey.completeLastPage()) {
       return;
     } else {
+      console.log(this.issuerInvite.data)
+      const reg_number = this.issuerInvite.registration_number
       this.issuerInvite.data = this.survey.data;
-
+      this.issuerInvite.data.registration_number = reg_number
       let actionPromise;
       if (this.editMode) {
         actionPromise = this.$store.dispatch(
@@ -170,7 +166,7 @@ export default class DataCollection extends Vue {
           this.setExistingClaimValues(invite.data);
         }
         this.inviteLink = `${publicUrl}/?invite_token=${invite.token}`;
-        this.issuerInvite.email = invite.email;
+        this.issuerInvite.registration_number = invite.registration_number;
         this.issuerInvite.issued = invite.issued;
         this.issuerInvite.expired = invite.expired;
         this.issuerInvite.revoked = invite.revoked;
