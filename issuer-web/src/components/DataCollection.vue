@@ -51,8 +51,15 @@ export default class DataCollection extends Vue {
     this.survey.onComplete.add((result: any) => {
       const credentialClaims = new Array<Claim>();
       Object.keys(result.data).forEach(key => {
-        credentialClaims.push({ name: key, value: result.data[key] });
+        if(key == "expiry_date")
+        {
+            const modifiedExpiryDate = result.data[key].split("-").join("")
+            credentialClaims.push({ name: key, value: modifiedExpiryDate });    
+        }
+        else
+          credentialClaims.push({ name: key, value: result.data[key] });
       });
+      
       this.$store.commit("credential/updateClaims", credentialClaims);
 
       // Go to next page on successful completion

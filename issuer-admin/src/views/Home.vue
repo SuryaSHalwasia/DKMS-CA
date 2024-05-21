@@ -31,7 +31,7 @@
             ></v-text-field>
             <v-spacer></v-spacer>
             <v-btn color="primary" dark class="mb-2" :to="{ path: 'invite' }"
-              >New Invite</v-btn
+              >New Invitation</v-btn
             >
           </v-toolbar>
         </template>
@@ -42,13 +42,6 @@
         <template v-slot:item.expired="{ item }">
           <v-simple-checkbox
             v-model="item.expired"
-            disabled
-          ></v-simple-checkbox>
-        </template>
-        <template v-slot:item.revoked="{ item }">
-          <v-simple-checkbox
-            v-if="item.revoked != null"
-            v-model="item.revoked"
             disabled
           ></v-simple-checkbox>
         </template>
@@ -77,10 +70,9 @@ export default class Home extends Vue {
   private loading = true;
   private options = {};
   private headers = [
-    { text: "Email", align: "start", value: "email" },
+    { text: "Registration Number", align: "start", value: "registration_number" },
     { text: "Issued", value: "issued" },
     { text: "Expired", value: "expired" },
-    { text: "Revoked", value: "revoked" },
     { text: "Actions", value: "actions", sortable: false }
   ];
   private invites = new Array<IssuerInvite>();

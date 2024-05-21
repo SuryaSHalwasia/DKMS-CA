@@ -1,7 +1,7 @@
 {
   "env": "development",
   "issuer": {
-    "name": "Issuer Admin",
+    "name": "FHWA VDKMS CA Admin",
     "publicUrl": "http://localhost:4251"
   },
   "authentication": {

@@ -1,15 +1,15 @@
 {
   "env": "docker-prod-like",
   "issuer": {
-    "name": "Issuer Admin",
-    "publicUrl": "http://localhost:8082"
+    "name": "FHWA VDKMS CA Admin",
+    "publicUrl": "http://18.188.165.212:8082"
   },
   "authentication": {
     "enabled": true,
     "oidcSettings": {
-      "authority": "http://localhost:8180/auth/realms/issuer-kit",
+      "authority": "http://18.188.165.212:8180/auth/realms/issuer-kit",
       "clientId": "issuer-admin",
-      "redirectUri": "http://localhost:8081/oidc-callback",
+      "redirectUri": "http://18.188.165.212:8081/oidc-callback",
       "redirect_uri": "http://localhost:8081/oidc-callback-error",
       "responseType": "code",
       "scope": "openid profile email",

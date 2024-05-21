@@ -1,68 +1,66 @@
 {
   "questions": [
     {
-      "name": "given_names",
+      "name": "registration_number",
       "type": "text",
-      "title": "First Name:",
+      "title": "Registration Number:",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "vin",
+      "type": "text",
+      "title": "Vehicle Identification Number(Vin):",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "vehicle_information",
+      "type": "text",
+      "title": "Vehicle Information:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "family_name",
+      "name": "vehicle_owner",
       "type": "text",
-      "title": "Last Name:",
+      "title": "Vehicle Owner:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "birthdate",
+      "name": "expiry_date",
       "type": "text",
-      "inputType": "date",
-      "title": "Date of Birth:",
+      "inputType": "text",
+      "dateFormat" : "mm-dd-yyyy",
+      "title": "Credential Expiry:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "street_address",
+      "name": "owner_address",
       "type": "text",
-      "title": "Street Address:",
+      "title": "Owner Address:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "postal_code",
+      "name": "photo_id",
       "type": "text",
-      "title": "Postal Code:",
+      "title": "Photo ID:",
       "placeHolder": "",
-      "isRequired": true,
-      "requiredErrorText": "Required Field"
+      "isRequired": false,
+      "defaultValue":"*"
     },
     {
-      "name": "locality",
+      "name": "state_issued",
       "type": "text",
-      "title": "City:",
+      "title": "State Issued:",
       "placeHolder": "",
-      "isRequired": true,
-      "requiredErrorText": "Required Field"
-    },
-    {
-      "name": "region",
-      "type": "text",
-      "title": "Province:",
-      "placeHolder": "",
-      "isRequired": true,
-      "requiredErrorText": "Required Field"
-    },
-    {
-      "name": "country",
-      "type": "text",
-      "title": "Country:",
-      "placeHolder": "",
-      "defaultValue": "Canada",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },

@@ -1,5 +1,5 @@
 {
-  "host": "localhost",
+  "host": "18.188.165.212",
   "port": "PORT",
   "public": "../public/",
   "serverSelectionTimeout": "SERVER_SELECTION_TIMEOUT",

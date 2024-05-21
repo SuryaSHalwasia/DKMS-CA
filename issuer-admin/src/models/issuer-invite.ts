@@ -3,7 +3,7 @@ import { Claim } from "./credential";
 export class IssuerInvite {
   public _id!: string;
   public token!: string;
-  public email!: string;
+  public registration_number!: string;
   public issued!: boolean;
   public expired!: boolean;
   public revoked?: boolean;

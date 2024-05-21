@@ -27,12 +27,12 @@ export const actions: ActionTree<IssuerInviteState, RootState> = {
       if (options.dataOptions.itemsPerPage > 0) {
         limitParam = `&%24limit=${options.dataOptions.itemsPerPage}`;
       }
-      sortParam = `&%24sort[${options.dataOptions.sortBy[0] || "email"}]=${
+      sortParam = `&%24sort[${options.dataOptions.sortBy[0] || "registration_number"}]=${
         options.dataOptions.sortDesc[0] ? -1 : 1
       }`;
     }
     if (options.searchString) {
-      searchParam = `&email=${options.searchString}`;
+      searchParam = `&registration_number=${options.searchString}`;
     }
     const idToken = context.rootGetters["oidcStore/oidcIdToken"];
     return new Promise<IssuerInviteListServiceResponse>((resolve, reject) => {
@@ -132,7 +132,7 @@ export const actions: ActionTree<IssuerInviteState, RootState> = {
       "configuration/getConfiguration"
     ] as Configuration;
     const sanitizedInvite = {
-      email: issuerInvite.email,
+      registration_number: issuerInvite.registration_number,
       data: issuerInvite.data,
       issued: issuerInvite.issued,
       expired: issuerInvite.expired,
