@@ -568,7 +568,7 @@
       "secret": "**********",
       "redirectUris": [
         "http://localhost:4250/*",
-        "http://localhost:8081/*"
+        "http://18.188.165.212:8081/*"
       ],
       "webOrigins": [
         "+"
@@ -693,7 +693,7 @@
       "secret": "**********",
       "redirectUris": [
         "http://localhost:4251/*",
-        "http://localhost:8082/*"
+        "http://18.188.165.212:8082/*"
       ],
       "webOrigins": [
         "+"
@@ -739,7 +739,7 @@
             "userinfo.token.claim": "true",
             "user.attribute.owner_address": "owner_address",
             "id.token.claim": "true",
-            "user.attribute.region_issued": "region_issued",
+            "user.attribute.state_issued": "state_issued",
             "access.token.claim": "true"
           }
         },
@@ -1251,7 +1251,7 @@
             "userinfo.token.claim": "true",
             "user.attribute.owner_address": "owner_address",
             "id.token.claim": "true",
-            "user.attribute.region_issued": "region_issued",
+            "user.attribute.state_issued": "state_issued",
             "access.token.claim": "true"
           }
         }

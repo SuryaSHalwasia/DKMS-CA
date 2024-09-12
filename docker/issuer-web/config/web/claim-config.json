@@ -1,9 +1,23 @@
 {
   "questions": [
     {
-      "name": "vehicle_name",
+      "name": "registration_number",
       "type": "text",
-      "title": "Vehicle Name:",
+      "title": "Registration Number:",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "vin",
+      "type": "text",
+      "title": "Vehicle Identification Number(Vin):",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "vehicle_information",
+      "type": "text",
+      "title": "Vehicle Information:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"
@@ -43,9 +57,9 @@
       "defaultValue":"*"
     },
     {
-      "name": "region_issued",
+      "name": "state_issued",
       "type": "text",
-      "title": "Province:",
+      "title": "State Issued:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"

@@ -1,10 +1,17 @@
 {
   "questions": [
     {
-      "name": "vehicle_name",
+      "name": "vin",
       "type": "text",
-      "title": "Vehicle Name:",
-      "placeHolder": "Ford",
+      "title": "Vehicle Identification Number(Vin):",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "vehicle_information",
+      "type": "text",
+      "title": "Vehicle Information:",
+      "placeHolder": "Ford Mustang 2023",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
@@ -12,7 +19,7 @@
       "name": "vehicle_owner",
       "type": "text",
       "title": "Vehicle Owner:",
-      "placeHolder": "Alice",
+      "placeHolder": "Alice Smith",
       "isRequired": true,
       "requiredErrorText": "Required Field"
     },
@@ -43,9 +50,9 @@
       "defaultValue":"*"
     },
     {
-      "name": "region_issued",
+      "name": "state_issued",
       "type": "text",
-      "title": "Province:",
+      "title": "State Issued:",
       "placeHolder": "",
       "isRequired": true,
       "requiredErrorText": "Required Field"

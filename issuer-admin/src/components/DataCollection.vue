@@ -40,11 +40,6 @@
           label="Credential has been issued"
         ></v-checkbox>
         <v-checkbox
-          v-if="editMode && issuerInvite.revoked != null"
-          v-model="issuerInvite.revoked"
-          label="Credential was revoked"
-        ></v-checkbox>
-        <v-checkbox
           v-if="editMode"
           v-model="issuerInvite.expired"
           label="Invite has expired"
@@ -141,8 +136,10 @@ export default class DataCollection extends Vue {
     if (!this.$refs.form.validate() || !this.survey.completeLastPage()) {
       return;
     } else {
+      console.log(this.issuerInvite.data)
+      const reg_number = this.issuerInvite.registration_number
       this.issuerInvite.data = this.survey.data;
-
+      this.issuerInvite.data.registration_number = reg_number
       let actionPromise;
       if (this.editMode) {
         actionPromise = this.$store.dispatch(

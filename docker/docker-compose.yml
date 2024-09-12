@@ -196,7 +196,6 @@ services:
       HTTP_INTERFACE_PORT: ${AGENT_HTTP_INTERFACE_PORT}
       AGENT_ADMIN_PORT: ${AGENT_ADMIN_PORT}
       AGENT_NAME: ${AGENT_NAME}
-      AGENT_ADMIN_API_KEY: ${AGENT_ADMIN_API_KEY}
       TAILS_SERVER_URL: ${TAILS_SERVER_URL}
     networks:
       - issuer_kit
@@ -231,7 +230,7 @@ services:
         --wallet-storage-creds '{\"account\":\"${WALLET_USER}\",\"password\":\"${WALLET_PASSWORD}\",\"admin_account\":\"${WALLET_USER}\",\"admin_password\":\"${WALLET_PASSWORD}\"}' \
         --seed '${ACAPY_WALLET_SEED}' \
         --admin '0.0.0.0' ${AGENT_ADMIN_PORT} \
-        --${AGENT_ADMIN_MODE} \
+        --admin-insecure-mode \
         --label ${AGENT_NAME} \
         --tails-server-base-url ${TAILS_SERVER_URL}",
       ]

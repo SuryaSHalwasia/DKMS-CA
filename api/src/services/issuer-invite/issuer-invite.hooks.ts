@@ -55,7 +55,6 @@ export default {
       async (context: HookContext) => {
         context.data.token = uuidv4();
         context.data.created_at = moment().toISOString(true);
-        context.data.expiry = moment().add(5, 'minutes').toDate();
         if (context.app.get("issuer").validityDays > 0) {
           context.data.expiry = moment()
             .add(context.app.get("issuer").validityDays, "days")
